@@ -17,6 +17,9 @@ labels = ["Transaction receipt", "other"]
 CONFIDENCE_THRESHOLD = 0.7
 
 
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+
 
 def encode_image_to_base64(image_path):
     with open(image_path, "rb") as image_file:
