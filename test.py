@@ -37,7 +37,7 @@ def extract_transaction_data(image_path):
     Return in a clear, structured format."""
     
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-4o",
         messages=[{
             "role": "user",
             "content": [
