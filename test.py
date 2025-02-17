@@ -37,7 +37,8 @@ def extract_transaction_data(image_path):
     Return in a clear, structured format."""
     
     response = client.chat.completions.create(
-        model="gpt-4o",
+        # model="gpt-4o",
+        model="o1",
         messages=[{
             "role": "user",
             "content": [
@@ -103,7 +104,8 @@ if uploaded_file:
             
             with streamlit.spinner("Analyzing..."):
                 response = client.chat.completions.create(
-                    model="gpt-4o",
+                    model="o1",
+                    # model="gpt-4o",
                     messages=[{
                         "role": "user",
                         "content": [
