@@ -1,6 +1,7 @@
 
 
 import streamlit
+
 import tempfile
 from transformers import pipeline
 import fitz
@@ -102,7 +103,7 @@ if uploaded_file:
             
             with streamlit.spinner("Analyzing..."):
                 response = client.chat.completions.create(
-                    model="gpt-4o-mini",
+                    model="gpt-4o",
                     messages=[{
                         "role": "user",
                         "content": [
